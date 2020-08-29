@@ -1,0 +1,15 @@
+<div *ngIf="!winner">
+  <h1 *ngIf="player1">Player One Turn</h1>
+  <h1 *ngIf="player2">Player Two Turn</h1>
+  
+  <button (click)="IncreaseSum('left')"  class="gameButton">Choose Left</button>
+  <button (click)="IncreaseSum('right')" class="gameButton">Choose Right</button>  
+</div>
+
+<div *ngIf="winner">
+  <h1>{{winner}}</h1>
+
+  <h1>Player One Scores {{sumPlayer1}}</h1>
+  
+  <h1>Player Two Scores {{sumPlayer2}}</h1>
+</div>
